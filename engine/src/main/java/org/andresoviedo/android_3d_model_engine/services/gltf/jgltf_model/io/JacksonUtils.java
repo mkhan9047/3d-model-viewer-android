@@ -63,8 +63,7 @@ public class JacksonUtils
     /**
      * An consumer for {@link JsonError}s that prints log messages
      */
-    private static final Consumer<JsonError> LOG_JSON_ERROR_CONSUMER =
-        new Consumer<JsonError>()
+    private static final Consumer<JsonError> LOG_JSON_ERROR_CONSUMER = new Consumer<JsonError>()
     {
         @Override
         public void accept(JsonError jsonError)
@@ -107,7 +106,7 @@ public class JacksonUtils
                 if (jsonErrorConsumer != null)
                 {
                     jsonErrorConsumer.accept(new JsonError(
-                        "Unknown property: " + propertyName, 
+                        "Unknown property: " + propertyName,
                         jp.getParsingContext(), null));
                 }
                 return super.handleUnknownProperty(
